@@ -1,0 +1,172 @@
+@import "./fonticon.scss";
+a {
+  text-decoration: none;
+}
+.wjs-top {
+  height: 40px;
+  border-bottom: 1px solid #ccc;
+  line-height: 40px;
+  margin-bottom: 0px;
+  li:nth-child(6) {
+    background-color: red;
+    text-align: center;
+    a {
+      color: #fff;
+    }
+  }
+  a {
+    color: #666;
+    text-decoration: none;
+  }
+}
+
+.navbar {
+  min-height: 80px; // line-height: 80px;
+  margin-bottom: 0px;
+  .navbar-header {
+    padding-top: 10px; // font-size: 80px;
+    .icon-logo {
+      color: red;
+      font-size: 28px;
+    }
+    .icon-weijinsuo {
+      color: #000;
+      font-size: 28px;
+    }
+  }
+  .collapse {
+    min-height: 80px;
+    ul {
+      li {
+        a {
+          line-height: 80px;
+          font-size: 20px;
+          padding-top: 0px;
+          padding-bottom: 0px;
+          &:hover {
+            box-shadow: 0px -3px 0px red inset;
+          }
+        }
+        // 使用媒体查询获取最大宽度修改a的文字大小
+        @media screen and (max-width: 850px) {
+          a {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#carousel-example-generic {
+  .carousel-inner {
+    // 大图片要设置高度
+    .img {
+      height: 410px;
+    }
+    //小图片设置宽度
+    img {
+      width: 100%;
+    }
+    @for $i from 1 to 5 {
+      .item:nth-child(#{$i}) .img {
+        background: url("../images/slide_0#{$i}_2000x410.jpg") no-repeat center;
+      }
+    }
+  }
+}
+
+.ads {
+  padding: 15px 15px;
+  .ad {
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+        text-decoration: none;
+      color: #666;
+      span {
+        font-size: 80px;
+      }
+      .title {
+        font-size: 20px;
+      }
+    }
+    &:nth-child(4) {
+      border-right: 1px solid #ccc;
+    }
+    &:nth-child(5),
+    &:nth-child(6) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px 0px;
+      .red {
+        color: red;
+      }
+    }
+  }
+}
+
+.products {
+  padding: 0;
+  .row {
+    .pro {
+      //如果屏幕的宽度比较小,就影藏掉img
+      @media screen and (max-width: 375px) {
+        img {
+          display: none;
+        }
+      }
+      padding: 0;
+      height: 260px;
+      display: flex;
+      margin-bottom: 10px;
+      img {
+        flex-basis: 161px;
+      }
+      .right {
+        background-color: #eee;
+        border-left: 4px solid pink;
+        border-top: 4px solid pink;
+        flex: 1;
+        padding: 15px;
+        .first {
+          .badge {
+            background-color: red;
+          }
+        }
+        .huanben {
+          font-size: 14px;
+        }
+        ul {
+          display: flex;
+          justify-content: space-between;
+          -webkit-padding-start: 0px;
+          li {
+            list-style: none;
+            .bi {
+              color: red;
+            }
+            .progress {
+                width: 100px;
+            }
+        }
+    }
+    .button {
+        width: 100%;
+        position: relative;
+        .touzi {
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;     
+            }
+        }
+        .content {
+            text-align: center;
+            margin-top: 60px;
+        }
+      }
+    }
+  }
+}
